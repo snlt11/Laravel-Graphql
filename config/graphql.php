@@ -2,6 +2,9 @@
 
 declare(strict_types = 1);
 
+use App\GraphQL\Queries\UsersQuery;
+use App\GraphQL\Types\UserType;
+
 return [
     'route' => [
         // The prefix for routes; do NOT use a leading slash!
@@ -75,7 +78,7 @@ return [
     'schemas' => [
         'default' => [
             'query' => [
-                // ExampleQuery::class,
+                UsersQuery::class
             ],
             'mutation' => [
                 // ExampleMutation::class,
@@ -106,6 +109,7 @@ return [
     // ]
     //
     'types' => [
+        UserType::class
         // ExampleType::class,
         // ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
