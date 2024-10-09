@@ -3,6 +3,7 @@
 declare(strict_types = 1);
 
 use App\GraphQL\Mutations\CreateUserMutation;
+use App\GraphQL\Mutations\DeleteUserMutation;
 use App\GraphQL\Mutations\UpdateUserMutation;
 use App\GraphQL\Queries\UserByIdQuery;
 use App\GraphQL\Queries\UsersQuery;
@@ -87,6 +88,7 @@ return [
             'mutation' => [
                 CreateUserMutation::class,
                 UpdateUserMutation::class,
+                DeleteUserMutation::class,
             ],
             // The types only available in this schema
             'types' => [
