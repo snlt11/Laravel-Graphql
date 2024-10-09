@@ -17,7 +17,7 @@ class LoginMutation extends Mutation
 {
     protected $attributes = [
         'name' => 'login',
-        'description' => 'A mutation'
+        'description' => 'Login User mutation'
     ];
 
     public function type(): Type
@@ -45,7 +45,7 @@ class LoginMutation extends Mutation
     {
         $user = User::where('email', $args['email'])->first();
 
-        if(!$user){
+        if (!$user) {
             return [
                 'message' => 'User not found',
                 'status_code' => 404,
