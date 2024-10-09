@@ -1,6 +1,6 @@
 <?php
 
-declare(strict_types = 1);
+declare(strict_types=1);
 
 use App\GraphQL\Mutations\CreateUserMutation;
 use App\GraphQL\Mutations\DeleteUserMutation;
@@ -83,8 +83,21 @@ return [
     //      ],
     //  ]
     //
+
+
     'schemas' => [
         'default' => [
+            'mutation' => [
+                RegisterMutation::class,
+                LoginMutation::class,
+            ],
+            'middleware' => null,
+
+            'method' => ['GET', 'POST'],
+
+            'execution_middleware' => null,
+        ],
+        'user' => [
             'query' => [
                 UsersQuery::class,
                 UserByIdQuery::class
@@ -93,23 +106,9 @@ return [
                 CreateUserMutation::class,
                 UpdateUserMutation::class,
                 DeleteUserMutation::class,
-                RegisterMutation::class,
-                LoginMutation::class,
                 LogoutMutation::class,
             ],
-            // The types only available in this schema
-            'types' => [
-                // ExampleType::class,
-            ],
-
-            // Laravel HTTP middleware
-            'middleware' => null,
-
-            // Which HTTP methods to support; must be given in UPPERCASE!
-            'method' => ['GET', 'POST'],
-
-            // An array of middlewares, overrides the global ones
-            'execution_middleware' => null,
+            'middleware' => ['auth:api'],
         ],
     ],
 
