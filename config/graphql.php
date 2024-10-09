@@ -8,6 +8,7 @@ use App\GraphQL\Mutations\LoginMutation;
 use App\GraphQL\Mutations\LogoutMutation;
 use App\GraphQL\Mutations\RegisterMutation;
 use App\GraphQL\Mutations\UpdateUserMutation;
+use App\GraphQL\Mutations\UserExportMutation;
 use App\GraphQL\Queries\UserByIdQuery;
 use App\GraphQL\Queries\UsersQuery;
 use App\GraphQL\Types\TokenType;
@@ -90,6 +91,7 @@ return [
             'mutation' => [
                 RegisterMutation::class,
                 LoginMutation::class,
+                UserExportMutation::class,
             ],
             'middleware' => null,
 
