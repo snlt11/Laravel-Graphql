@@ -4,9 +4,11 @@ declare(strict_types = 1);
 
 use App\GraphQL\Mutations\CreateUserMutation;
 use App\GraphQL\Mutations\DeleteUserMutation;
+use App\GraphQL\Mutations\RegisterMutation;
 use App\GraphQL\Mutations\UpdateUserMutation;
 use App\GraphQL\Queries\UserByIdQuery;
 use App\GraphQL\Queries\UsersQuery;
+use App\GraphQL\Types\TokenType;
 use App\GraphQL\Types\UserType;
 
 return [
@@ -89,6 +91,7 @@ return [
                 CreateUserMutation::class,
                 UpdateUserMutation::class,
                 DeleteUserMutation::class,
+                RegisterMutation::class,
             ],
             // The types only available in this schema
             'types' => [
@@ -116,7 +119,8 @@ return [
     // ]
     //
     'types' => [
-        UserType::class
+        UserType::class,
+        TokenType::class
         // ExampleType::class,
         // ExampleRelationType::class,
         // \Rebing\GraphQL\Support\UploadType::class,
