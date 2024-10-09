@@ -29,7 +29,7 @@ class UpdateUserMutation extends Mutation
         return [
             'id' => ['type' => Type::nonNull(Type::id()), 'description' => 'User ID'],
             'name' => ['type' => Type::string(), 'description' => 'User Name'],
-            'email'=> ['type'=> Type::string(), 'description' => 'User Email'],
+            'email' => ['type' => Type::string(), 'description' => 'User Email'],
             'position' => ['type' => Type::string(), 'description' => 'User Position'],
             'salary' => ['type' => Type::string(), 'description' => 'User Salary'],
         ];
@@ -39,9 +39,9 @@ class UpdateUserMutation extends Mutation
         return [
             'id' => ['required'],
             'name' => ['nullable'],
-            'email' => ['nullable', 'email', 'unique:users,email,'. $args['id']],
-            'position' => ['nullable','string','max:255'],
-            'salary' => ['nullable','string'],
+            'email' => ['nullable', 'email', 'unique:users,email,' . $args['id']],
+            'position' => ['nullable', 'string', 'max:255'],
+            'salary' => ['nullable', 'string'],
         ];
     }
 
@@ -52,9 +52,7 @@ class UpdateUserMutation extends Mutation
         $with = $fields->getRelations();
 
         $user = User::findOrFail($args['id']);
-        if(!$user){
-            return null;
-        }
+
         $user->update($args);
 
         return $user;
