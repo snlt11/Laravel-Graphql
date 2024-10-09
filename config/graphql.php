@@ -2,6 +2,7 @@
 
 declare(strict_types = 1);
 
+use App\GraphQL\Mutations\CreateUserMutation;
 use App\GraphQL\Queries\UserByIdQuery;
 use App\GraphQL\Queries\UsersQuery;
 use App\GraphQL\Types\UserType;
@@ -83,7 +84,8 @@ return [
                 UserByIdQuery::class
             ],
             'mutation' => [
-                // ExampleMutation::class,
+                CreateUserMutation::class,
+                
             ],
             // The types only available in this schema
             'types' => [
