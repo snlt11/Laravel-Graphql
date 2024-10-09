@@ -42,5 +42,8 @@ class UserExportMutation extends Mutation
         $fileUrl = url('/storage/' . $fileName);
 
         return $fileUrl;
+
+        // return Excel::download(new UsersExport, 'users_export.xlsx');
+
     }
 }
