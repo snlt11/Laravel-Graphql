@@ -12,11 +12,11 @@ use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
 use Rebing\GraphQL\Support\SelectFields;
 
-class CreateUserMutation extends Mutation
+class UpdateUserMutation extends Mutation
 {
     protected $attributes = [
-        'name' => 'createUser',
-        'description' => 'Create User Mutation'
+        'name' => 'updateUser',
+        'description' => 'Update User mutation'
     ];
 
     public function type(): Type
@@ -27,21 +27,21 @@ class CreateUserMutation extends Mutation
     public function args(): array
     {
         return [
-            'name' => ['type' => Type::nonNull(Type::string()), 'description' => 'User Name'],
-            'email' => ['type' => Type::nonNull(Type::string()), 'description' => 'User Email'],
+            'id' => ['type' => Type::nonNull(Type::id()), 'description' => 'User ID'],
+            'name' => ['type' => Type::string(), 'description' => 'User Name'],
+            'email'=> ['type'=> Type::string(), 'description' => 'User Email'],
             'position' => ['type' => Type::string(), 'description' => 'User Position'],
             'salary' => ['type' => Type::string(), 'description' => 'User Salary'],
-            'password' => ['type' => Type::nonNull(Type::string()), 'description' => 'User Password'],
         ];
     }
     public function rules(array $args = []): array
     {
         return [
-            'name' => ['required','string','max:255'],
-            'email' => ['required','email','unique:users,email'],
+            'id' => ['required'],
+            'name' => ['nullable'],
+            'email' => ['nullable', 'email', 'unique:users,email,'. $args['id']],
             'position' => ['nullable','string','max:255'],
-            'salary' => ['nullable'],
-            'password' => ['required','string','min:8'],
+            'salary' => ['nullable','string'],
         ];
     }
 
@@ -51,6 +51,12 @@ class CreateUserMutation extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        return User::create($args);
+        $user = User::findOrFail($args['id']);
+        if(!$user){
+            return null;
+        }
+        $user->update($args);
+
+        return $user;
     }
 }
