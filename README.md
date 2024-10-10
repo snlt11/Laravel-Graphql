@@ -1,66 +1,76 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel Application with GraphQL, Authentication, and CRUD Operations
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+## About the Project
 
-## About Laravel
+This Laravel application demonstrates the integration of GraphQL with various features, including authentication, CRUD operations, and data import/export. The project utilizes Laravel Passport for authentication and Rebing/GraphQL for GraphQL support.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Key Features
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+1. GraphQL Support: The application uses Rebing/GraphQL to provide GraphQL endpoints for CRUD operations, import/export functionality, and authentication.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+2. Authentication: Laravel Passport is used for handling user authentication. The application includes GraphQL mutations for logging in and out, as well as checking user permissions.
 
-## Learning Laravel
+3. CRUD Operations: The application provides GraphQL mutations for creating, reading, updating, and deleting records in the database. The mutations are implemented using Laravel's Eloquent ORM for efficient data retrieval.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+4. Data Import/Export: The application includes GraphQL mutations for importing and exporting data in CSV format. The import process uses Laravel's Eloquent ORM to validate and save the imported data, while the export process generates a CSV file containing the desired data.
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+5. Error Handling: The application includes GraphQL error handling to provide meaningful error messages to the client. It utilizes Laravel's exception handling and GraphQL error formatting to ensure that errors are properly returned to the client.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Getting Started
 
-## Laravel Sponsors
+Clone the repository:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+```bash
+git clone https://github.com/snlt11/Laravel-Graphql
+```
 
-### Premium Partners
+Install dependencies:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+```bash
+composer install
+```
+
+Copy .env.example file to .env on the root folder:
+
+```bash
+cp .env.example .env
+```
+
+Generate Key
+
+```bash
+php artisan key:generate
+```
+
+Configure the database:
+Update the `.env` file with your database credentials and run the database migrations:
+
+```bash
+php artisan migrate
+```
+
+Generate a personal access client for authentication:
+
+```bash
+php artisan passport:client --personal
+```
+
+Make sure to note the client ID and secret, as you will need them for authentication.
+
+Start the development server:
+
+```bash
+php artisan serve
+```
+
+## GraphQL Schema
+
+The application includes a GraphQL schema file (`graphql/schema.graphql`) that defines the available queries, mutations, and types for the API. You can customize the schema to fit your specific requirements.
+
+## Testing
+
+To test the application, you can use a GraphQL client like GraphQL Playground or Postman. Make sure to include the necessary authentication headers in your requests.
 
 ## Contributing
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Code of Conduct
-
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Contributions are welcome! If you find any bugs or have suggestions for improvements, please feel free to open an issue or submit a pull request.
