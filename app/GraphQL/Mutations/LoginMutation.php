@@ -63,6 +63,6 @@ class LoginMutation extends Mutation
             ];
         }
 
-        return null;
+        return ["message" => "Invalid credentials", "status_code" => 401];
     }
 }

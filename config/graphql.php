@@ -91,7 +91,6 @@ return [
             'mutation' => [
                 RegisterMutation::class,
                 LoginMutation::class,
-                UserExportMutation::class,
             ],
             'middleware' => null,
 
@@ -109,6 +108,7 @@ return [
                 UpdateUserMutation::class,
                 DeleteUserMutation::class,
                 LogoutMutation::class,
+                UserExportMutation::class,
             ],
             'middleware' => ['auth:api'],
         ],
