@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Mutations;
 
+use App\Helpers\AuthCheckHelper;
 use App\Models\User;
 use Closure;
 use GraphQL\Type\Definition\ResolveInfo;
@@ -37,14 +38,8 @@ class DeleteUserMutation extends Mutation
         $with = $fields->getRelations();
 
         $user = User::findOrFail($args['id']);
+        AuthCheckHelper::canDeleteUser($user);
         $user->delete();
         return 'User deleted successfully';
-
-        // user can delete but need to fix
-        // if ($user->role === 'admin' && $user->id == auth()->id()) {
-        //     $user->delete();
-        //     return 'User deleted successfully';
-        // }
-        // return null;
     }
 }
