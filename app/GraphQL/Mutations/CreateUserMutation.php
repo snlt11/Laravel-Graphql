@@ -46,8 +46,12 @@ class CreateUserMutation extends Mutation
         ];
     }
 
-    public function resolve(array $args,)
+    public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
     {
+        $fields = $getSelectFields();
+        $select = $fields->getSelect();
+        $with = $fields->getRelations();
+
         AuthCheckHelper::canCreateOrUpdateUser();
         return User::create($args);
     }
