@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Mutations;
 
+use App\Helpers\AuthCheckHelper;
 use App\Models\User;
 use Closure;
 use GraphQL\Type\Definition\ResolveInfo;
@@ -37,20 +38,17 @@ class CreateUserMutation extends Mutation
     public function rules(array $args = []): array
     {
         return [
-            'name' => ['required','string','max:255'],
-            'email' => ['required','email','unique:users,email'],
-            'position' => ['nullable','string','max:255'],
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'email', 'unique:users,email'],
+            'position' => ['nullable', 'string', 'max:255'],
             'salary' => ['nullable'],
-            'password' => ['required','string','min:8'],
+            'password' => ['required', 'string', 'min:8'],
         ];
     }
 
-    public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
+    public function resolve(array $args,)
     {
-        $fields = $getSelectFields();
-        $select = $fields->getSelect();
-        $with = $fields->getRelations();
-
+        AuthCheckHelper::canCreateOrUpdateUser();
         return User::create($args);
     }
 }

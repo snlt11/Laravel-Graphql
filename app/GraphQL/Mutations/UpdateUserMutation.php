@@ -4,13 +4,14 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Mutations;
 
-use App\Models\User;
 use Closure;
-use GraphQL\Type\Definition\ResolveInfo;
+use App\Models\User;
+use App\Helpers\AuthCheckHelper;
 use GraphQL\Type\Definition\Type;
-use Rebing\GraphQL\Support\Facades\GraphQL;
 use Rebing\GraphQL\Support\Mutation;
+use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
+use Rebing\GraphQL\Support\Facades\GraphQL;
 
 class UpdateUserMutation extends Mutation
 {
@@ -45,16 +46,11 @@ class UpdateUserMutation extends Mutation
         ];
     }
 
-    public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
+    public function resolve(array $args)
     {
-        $fields = $getSelectFields();
-        $select = $fields->getSelect();
-        $with = $fields->getRelations();
-
+        AuthCheckHelper::canCreateOrUpdateUser();
         $user = User::findOrFail($args['id']);
-
         $user->update($args);
-
         return $user;
     }
 }

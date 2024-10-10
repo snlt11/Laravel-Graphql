@@ -31,12 +31,8 @@ class DeleteUserMutation extends Mutation
         ];
     }
 
-    public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
+    public function resolve(array $args)
     {
-        $fields = $getSelectFields();
-        $select = $fields->getSelect();
-        $with = $fields->getRelations();
-
         $user = User::findOrFail($args['id']);
         AuthCheckHelper::canDeleteUser($user);
         $user->delete();
