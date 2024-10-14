@@ -284,3 +284,403 @@
 #49 /home/khine/Desktop/Laravel-Graphql/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
 #50 {main}
 "} 
+[2024-10-14 04:51:44] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 05:01:35] local.ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php:59)
+[stacktrace]
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#7 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#8 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#9 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(40): Illuminate\\Console\\Command->runCommand()
+#10 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewCacheCommand.php(36): Illuminate\\Console\\Command->callSilent()
+#11 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewCacheCommand->handle()
+#12 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#14 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#15 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call()
+#16 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#17 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#18 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#19 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#20 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(40): Illuminate\\Console\\Command->runCommand()
+#21 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(52): Illuminate\\Console\\Command->callSilent()
+#22 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeCommand.php(36): Illuminate\\Console\\Command->callSilently()
+#23 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(40): Illuminate\\Foundation\\Console\\OptimizeCommand->Illuminate\\Foundation\\Console\\{closure}()
+#24 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/View/Components/Factory.php(60): Illuminate\\Console\\View\\Components\\Task->render()
+#25 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeCommand.php(36): Illuminate\\Console\\View\\Components\\Factory->__call()
+#26 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeCommand->handle()
+#27 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#29 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#30 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call()
+#31 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#32 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#33 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#34 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Application.php(1047): Illuminate\\Console\\Command->run()
+#35 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Application.php(316): Symfony\\Component\\Console\\Application->doRunCommand()
+#36 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#37 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#38 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle()
+#39 /home/khine/Desktop/Laravel-Graphql/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#40 {main}
+"} 
+[2024-10-14 05:01:44] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 05:04:06] local.ERROR: View path not found. {"exception":"[object] (RuntimeException(code: 0): View path not found. at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewClearCommand.php:59)
+[stacktrace]
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewClearCommand->handle()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#7 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#8 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#9 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(40): Illuminate\\Console\\Command->runCommand()
+#10 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/ViewCacheCommand.php(36): Illuminate\\Console\\Command->callSilent()
+#11 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\ViewCacheCommand->handle()
+#12 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#13 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#14 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#15 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call()
+#16 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#17 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#18 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#19 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(67): Illuminate\\Console\\Command->run()
+#20 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(40): Illuminate\\Console\\Command->runCommand()
+#21 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Concerns/CallsCommands.php(52): Illuminate\\Console\\Command->callSilent()
+#22 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeCommand.php(36): Illuminate\\Console\\Command->callSilently()
+#23 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/View/Components/Task.php(40): Illuminate\\Foundation\\Console\\OptimizeCommand->Illuminate\\Foundation\\Console\\{closure}()
+#24 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/View/Components/Factory.php(60): Illuminate\\Console\\View\\Components\\Task->render()
+#25 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/OptimizeCommand.php(36): Illuminate\\Console\\View\\Components\\Factory->__call()
+#26 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(36): Illuminate\\Foundation\\Console\\OptimizeCommand->handle()
+#27 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Util.php(43): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#28 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(95): Illuminate\\Container\\Util::unwrapIfClosure()
+#29 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/BoundMethod.php(35): Illuminate\\Container\\BoundMethod::callBoundMethod()
+#30 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(690): Illuminate\\Container\\BoundMethod::call()
+#31 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(213): Illuminate\\Container\\Container->call()
+#32 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Command/Command.php(279): Illuminate\\Console\\Command->execute()
+#33 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Console/Command.php(182): Symfony\\Component\\Console\\Command\\Command->run()
+#34 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Application.php(1047): Illuminate\\Console\\Command->run()
+#35 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Application.php(316): Symfony\\Component\\Console\\Application->doRunCommand()
+#36 /home/khine/Desktop/Laravel-Graphql/vendor/symfony/console/Application.php(167): Symfony\\Component\\Console\\Application->doRun()
+#37 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Console/Kernel.php(197): Symfony\\Component\\Console\\Application->run()
+#38 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1203): Illuminate\\Foundation\\Console\\Kernel->handle()
+#39 /home/khine/Desktop/Laravel-Graphql/artisan(13): Illuminate\\Foundation\\Application->handleCommand()
+#40 {main}
+"} 
+[2024-10-14 05:11:44] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 06:53:29] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 07:03:29] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 07:14:00] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 07:24:01] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 07:34:01] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 07:44:01] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 07:54:01] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 08:01:58] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
+[2024-10-14 08:11:58] local.ERROR: Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\View\Compilers\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\View\ViewServiceProvider->Illuminate\View\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\Container\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\Container\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\Foundation\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\Container\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\Foundation\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught InvalidArgumentException: Please provide a valid cache path. in /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67
+Stack trace:
+#0 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/ViewServiceProvider.php(97): Illuminate\\View\\Compilers\\Compiler->__construct()
+#1 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(931): Illuminate\\View\\ViewServiceProvider->Illuminate\\View\\{closure}()
+#2 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(815): Illuminate\\Container\\Container->build()
+#3 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1046): Illuminate\\Container\\Container->resolve()
+#4 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Container/Container.php(751): Illuminate\\Foundation\\Application->resolve()
+#5 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/Application.php(1028): Illuminate\\Container\\Container->make()
+#6 /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/Foundation/helpers.php(124): Illuminate\\Foundation\\Application->make()
+#7 Command line code(1): app()
+#8 {main}
+  thrown at /home/khine/Desktop/Laravel-Graphql/vendor/laravel/framework/src/Illuminate/View/Compilers/Compiler.php:67)
+[stacktrace]
+#0 {main}
+"} 
