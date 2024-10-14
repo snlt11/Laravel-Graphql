@@ -33,6 +33,14 @@ return new class extends Migration
             'role' => 'admin',
             'password' => bcrypt('supersecret'),
         ]);
+        User::create([
+            'name' => 'user',
+            'email' => 'user@gmail.com',
+            'position' => 'Default User',
+            'salary' => '100000',
+            'role' => 'user',
+            'password' => bcrypt('password')
+        ]);
 
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
