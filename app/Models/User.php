@@ -11,7 +11,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 class User extends Authenticatable
 {
     /** @use HasFactory<\Database\Factories\UserFactory> */
-    use HasApiTokens,HasFactory, Notifiable;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -25,6 +25,17 @@ class User extends Authenticatable
         'salary',
         'role',
         'password',
+        'department',
+        'date_of_birth',
+        'nrc',
+        'address',
+        'phone',
+        'gender',
+        'skills',
+        'emergency_contact',
+        'emergency_contact_number',
+        'joining_date',
+        'system_status',
     ];
 
     /**

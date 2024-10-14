@@ -21,9 +21,22 @@ return new class extends Migration
             $table->enum('role', ['admin', 'user'])->default('user');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->default(bcrypt('secret'));
+            $table->string('department')->nullable();
+            $table->date('date_of_birth')->nullable();
+            $table->string('nrc')->nullable();
+            $table->text('address')->nullable();
+            $table->string('phone')->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable();
+            $table->text('skills')->nullable();
+            $table->string('emergency_contact')->nullable();
+            $table->string('emergency_contact_number')->nullable();
+            $table->date('joining_date')->nullable();
+            $table->enum('system_status', ['active', 'inactive', 'deleted'])->default('active');
             $table->rememberToken();
             $table->timestamps();
         });
+
+        // department, dob, nrc, address, phone, gender, skills, Emergency Contact, Emergency Contact number, joining date, system status
 
         User::create([
             'name' => 'admin',
