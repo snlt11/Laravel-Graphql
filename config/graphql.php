@@ -11,6 +11,7 @@ use App\GraphQL\Mutations\UpdateUserMutation;
 use App\GraphQL\Mutations\UserExportMutation;
 use App\GraphQL\Queries\UserByIdQuery;
 use App\GraphQL\Queries\UsersQuery;
+use App\GraphQL\Queries\UserWithPagination;
 use App\GraphQL\Types\TokenType;
 use App\GraphQL\Types\UserType;
 

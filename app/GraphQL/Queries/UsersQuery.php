@@ -16,12 +16,28 @@ class UsersQuery extends Query
 {
     protected $attributes = [
         'name' => 'users',
-        'description' => 'A query'
+        'description' => 'User With Pagination'
     ];
 
     public function type(): Type
     {
-        return Type::listOf(GraphQL::type('User'));
+        return GraphQL::paginate('User');
+    }
+
+    public function args(): array
+    {
+        return [
+            'page' => [
+                'type' => Type::int(),
+                'description' => 'Page number for pagination',
+                'defaultValue' => 1
+            ],
+            'limit' => [
+                'type' => Type::int(),
+                'description' => 'Number of users per page',
+                'defaultValue' => 5
+            ],
+        ];
     }
 
     public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
@@ -31,6 +47,6 @@ class UsersQuery extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        return User::all();
+        return User::paginate($args['limit'], ['*'], 'page', $args['page']);
     }
 }
