@@ -74,3 +74,67 @@ To test the application, you can use a GraphQL client like GraphQL Playground or
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please feel free to open an issue or submit a pull request.
+
+## End Point For Register, Login , Logout and Employee CRUD
+
+### Register a New User
+
+To register a new user, use the following GraphQL mutation:
+
+```bash
+mutation Register {
+  register(name: "one", email: "one@gmail.com", password: "123321123") {
+    message
+    token
+    status_code
+  }
+}
+```
+
+### Login
+
+To log in and retrieve a token, use the following mutation:
+
+```bash
+mutation Login {
+  login(email: "super@admin.com", password: "supersecret") {
+    message
+    token
+    status_code
+  }
+}
+```
+
+### Logout(Requires Token)
+
+To log out, the user must be authenticated by passing a token in the request headers:
+
+```bash
+mutation Logout {
+  logout
+}
+```
+
+-   Headers:
+    Include the token in the request header:
+
+```bash
+Authorization: Bearer {token}
+```
+
+### Delete User (Requires Token)
+
+To delete a user, you need to be authenticated and provide the user ID:
+
+```bash
+mutation DeleteUser {
+  deleteUser(id: "4")
+}
+```
+
+-   Headers:
+    Include the token in the request header:
+
+```bash
+Authorization: Bearer {token}
+```
