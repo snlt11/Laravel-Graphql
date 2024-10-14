@@ -30,18 +30,61 @@ class UserType extends GraphQLType
                 'description' => 'User email'
             ],
             'position' => [
-                'type'=> Type::string(),
-                'description'=> 'User position'
+                'type' => Type::string(),
+                'description' => 'User position'
             ],
             'salary' => [
-                'type'=> Type::string(),
-                'description'=> 'User Salary'
+                'type' => Type::string(),
+                'description' => 'User Salary'
             ],
             'role' => [
-                'type'=> Type::string(),
-                'description'=> 'User Role'
-            ]
-
+                'type' => Type::string(),
+                'description' => 'User Role'
+            ],
+            'department' => [
+                'type' => Type::string(),
+                'description' => 'User Department'
+            ],
+            'date_of_birth' => [
+                'type' => Type::string(),
+                'description' => 'User Date of Birth'
+            ],
+            'nrc' => [
+                'type' => Type::string(),
+                'description' => 'User National Registration Card'
+            ],
+            'address' => [
+                'type' => Type::string(),
+                'description' => 'User Address'
+            ],
+            'phone' => [
+                'type' => Type::string(),
+                'description' => 'User Phone'
+            ],
+            'gender' => [
+                'type' => Type::string(),
+                'description' => 'User Gender'
+            ],
+            'skills' => [
+                'type' => Type::string(),
+                'description' => 'User Skills'
+            ],
+            'emergency_contact' => [
+                'type' => Type::string(),
+                'description' => 'User Emergency Contact'
+            ],
+            'emergency_contact_number' => [
+                'type' => Type::string(),
+                'description' => 'User Emergency Contact Number'
+            ],
+            'joining_date' => [
+                'type' => Type::string(),
+                'description' => 'User Joining Date'
+            ],
+            'system_status' => [
+                'type' => Type::string(),
+                'description' => 'User System Status'
+            ],
         ];
     }
 }
