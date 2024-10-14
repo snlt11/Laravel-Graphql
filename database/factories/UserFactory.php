@@ -32,8 +32,30 @@ class UserFactory extends Factory
             'role' => 'user',
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
+            'department' => fake()->randomElement(['HR', 'Finance', 'Development', 'Marketing']),
+            'date_of_birth' => fake()->date(),
+            'nrc' => $this->generateNRC(),
+            'address' => fake()->address(),
+            'phone' => fake()->phoneNumber(),
+            'gender' => fake()->randomElement(['male', 'female', 'other']),
+            'skills' => fake()->words(3, true),
+            'emergency_contact' => fake()->name(),
+            'emergency_contact_number' => fake()->phoneNumber(),
+            'joining_date' => now(),
+            'system_status' => fake()->randomElement(['active', 'inactive', 'deleted']),
             'remember_token' => Str::random(10),
         ];
+    }
+
+    private function generateNRC(): string
+    {
+        $stateRegionCode = fake()->numberBetween(1, 14);  // Generate state/region code
+        $districtCode = strtoupper(fake()->lexify('???')); // Generate random district code
+        $citizenIdentifier = fake()->randomElement(['N', 'M', 'F']); // Citizen identifier
+        $uniqueNumber = fake()->numberBetween(100000, 999999); // Generate unique 6-digit number
+
+        // Construct NRC format
+        return "{$stateRegionCode}/{$districtCode}({$citizenIdentifier}){$uniqueNumber}";
     }
 
     /**
