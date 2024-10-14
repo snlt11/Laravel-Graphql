@@ -122,6 +122,191 @@ mutation Logout {
 Authorization: Bearer {token}
 ```
 
+### Retrieve Users(Requires Token)
+
+This query retrieves a list of users with pagination.
+
+```bash
+query Users {
+    users(limit: 5, page: 1) {
+        data {
+            id
+            name
+            email
+            position
+            salary
+            role
+            department
+            date_of_birth
+            nrc
+            address
+            phone
+            gender
+            skills
+            emergency_contact
+            emergency_contact_number
+            joining_date
+            system_status
+        }
+        total
+        per_page
+        current_page
+        from
+        to
+        last_page
+        has_more_pages
+    }
+}
+```
+
+-   Headers:
+    Include the token in the request header:
+
+```bash
+Authorization: Bearer {token}
+```
+
+### Retrieve User by ID(Requires Token)
+
+This query fetches detailed information for a single user by their ID.
+
+```bash
+query UserById {
+    userById(id: 1) {
+        id
+        name
+        email
+        position
+        salary
+        role
+        department
+        date_of_birth
+        nrc
+        address
+        phone
+        gender
+        skills
+        emergency_contact
+        emergency_contact_number
+        joining_date
+        system_status
+    }
+}
+```
+
+-   Headers:
+    Include the token in the request header:
+
+```bash
+Authorization: Bearer {token}
+```
+
+### Create a New User(Requires Token)
+
+This mutation allows you to create a new user with the provided details.
+
+```bash
+mutation CreateUser {
+    createUser(
+        name: "one"
+        email: "one@gmail.com"
+        password: "123321321"
+        position: "staff"
+        salary: "1231223"
+        department: "HR"
+        date_of_birth: "2001-12-12"
+        nrc: "1/makata(N)123321"
+        address: "No.60,Main Road"
+        phone: "09300200100"
+        gender: "male"
+        skills: "language"
+        emergency_contact: "mom"
+        emergency_contact_number: "0192030404"
+        joining_date: "2024-10-10"
+        system_status: "active"
+        role: "user"
+    ) {
+        id
+        name
+        email
+        position
+        salary
+        role
+        department
+        date_of_birth
+        nrc
+        address
+        phone
+        gender
+        skills
+        emergency_contact
+        emergency_contact_number
+        joining_date
+        system_status
+    }
+}
+```
+
+-   Headers:
+    Include the token in the request header:
+
+```bash
+Authorization: Bearer {token}
+```
+
+### Update an Existing User(Requires Token)
+
+This mutation updates an existing user's details, including their name, position, salary, and more.
+
+```bash
+mutation UpdateUser {
+    updateUser(
+        id: "2"
+        name: "update name"
+        email: "tee@gmail.com"
+        password: "4321234568"
+        position: "new update position"
+        salary: "111223344"
+        role: "admin"
+        department: "new update departnment"
+        address: "No.101,Baho Road"
+        nrc: "1/makana(N)11223344"
+        date_of_birth: "2000-11-11"
+        phone: "09100200300"
+        gender: "male"
+        skills: "new update skill"
+        emergency_contact: "Dad"
+        emergency_contact_number: "09100200300"
+        joining_date: "2024-11-12"
+    ) {
+        id
+        name
+        email
+        position
+        salary
+        role
+        department
+        date_of_birth
+        nrc
+        address
+        phone
+        gender
+        skills
+        emergency_contact
+        emergency_contact_number
+        joining_date
+        system_status
+    }
+}
+```
+
+-   Headers:
+    Include the token in the request header:
+
+```bash
+Authorization: Bearer {token}
+```
+
 ### Delete User (Requires Token)
 
 To delete a user, you need to be authenticated and provide the user ID:
