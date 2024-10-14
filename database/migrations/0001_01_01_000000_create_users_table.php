@@ -26,17 +26,15 @@ return new class extends Migration
             $table->string('nrc')->nullable();
             $table->text('address')->nullable();
             $table->string('phone')->nullable();
-            $table->enum('gender', ['male', 'female', 'other'])->nullable();
+            $table->enum('gender', ['male', 'female', 'other'])->nullable()->default('other');
             $table->text('skills')->nullable();
             $table->string('emergency_contact')->nullable();
             $table->string('emergency_contact_number')->nullable();
-            $table->date('joining_date')->nullable();
+            $table->date('joining_date')->nullable()->default(now());
             $table->enum('system_status', ['active', 'inactive', 'deleted'])->default('active');
             $table->rememberToken();
             $table->timestamps();
         });
-
-        // department, dob, nrc, address, phone, gender, skills, Emergency Contact, Emergency Contact number, joining date, system status
 
         User::create([
             'name' => 'admin',
