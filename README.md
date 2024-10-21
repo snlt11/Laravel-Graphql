@@ -55,7 +55,23 @@ Generate a personal access client for authentication:
 php artisan passport:client --personal
 ```
 
-Make sure to note the client ID and secret, as you will need them for authentication.
+To Fix Error "Please provide a valid cache path"
+
+```bash
+cd storage/
+
+mkdir -p framework/{sessions,views,cache}
+
+chmod -R 775 framework
+```
+
+Clear Cache
+
+```bash
+php artisan optimize
+
+php artisan cache:clear
+```
 
 Start the development server:
 
