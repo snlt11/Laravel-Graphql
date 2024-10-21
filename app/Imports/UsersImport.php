@@ -19,6 +19,17 @@ class UsersImport implements ToModel
             'email' => $row[2],
             'position' => $row[3],
             'salary' => $row[4],
+            'department' => $row[5],
+            'date_of_birth' => $row[6],
+            'nrc' => $row[7],
+            'address' => $row[8],
+            'phone' => $row[9],
+            'gender' => $row[10],
+            'skills' => $row[11],
+            'emergency_contact' => $row[12],
+            'emergency_contact_number' => $row[13],
+            'joining_date' => $row[14],
+            'system_status' => $row[15],
         ]);
     }
 }
