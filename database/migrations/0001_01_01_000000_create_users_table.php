@@ -34,6 +34,7 @@ return new class extends Migration
             $table->enum('system_status', ['active', 'inactive', 'deleted'])->default('active');
             $table->rememberToken();
             $table->timestamps();
+            $table->softDeletes();
         });
 
         User::create([
