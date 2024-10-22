@@ -12,6 +12,8 @@ use GraphQL\Type\Definition\Type;
 use Rebing\GraphQL\Support\Mutation;
 use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
+use Illuminate\Support\Facades\Validator;
+use Rebing\GraphQL\Error\ValidationError;
 use Rebing\GraphQL\Support\Facades\GraphQL;
 
 class UpdateUserMutation extends Mutation
@@ -72,6 +74,23 @@ class UpdateUserMutation extends Mutation
             'system_status' => ['nullable'],
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'id.required' => 'User ID is required.',
+            'email.email' => 'User Email must be a valid email address.',
+            'position.string' => 'User Position must be a string.',
+            'position.max' => 'User Position cannot exceed 255 characters.',
+            'role.in' => 'User Role must be either admin or user.',
+            'password.string' => 'User Password must be a string.',
+            'password.min' => 'User Password must be at least 8 characters long.',
+            'department.string' => 'User Department must be a string.',
+            'department.max' => 'User Department cannot exceed 255 characters.',
+            'address.string' => 'User Address must be a string.',
+            'skills.string' => 'User Skills must be a string.',
+            'emergency_contact.string' => 'User Emergency Contact must be a string.',
+        ];
+    }
 
     public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
     {
@@ -79,6 +98,10 @@ class UpdateUserMutation extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
+        $validator = Validator::make($args, $this->rules(), $this->messages());
+        if ($validator->fails()) {
+            throw new ValidationError('Validation failed', $validator);
+        }
         AuthCheckHelper::canCreateOrUpdateUser();
 
         $user = User::findOrFail($args['id']);

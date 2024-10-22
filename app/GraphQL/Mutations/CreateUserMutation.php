@@ -4,14 +4,18 @@ declare(strict_types=1);
 
 namespace App\GraphQL\Mutations;
 
-use App\Helpers\AuthCheckHelper;
-use App\Models\User;
 use Closure;
-use GraphQL\Type\Definition\ResolveInfo;
+use App\Models\User;
+use App\Helpers\AuthCheckHelper;
 use GraphQL\Type\Definition\Type;
-use Rebing\GraphQL\Support\Facades\GraphQL;
+use App\Helpers\CustomMessageError;
 use Rebing\GraphQL\Support\Mutation;
+use GraphQL\Type\Definition\ResolveInfo;
 use Rebing\GraphQL\Support\SelectFields;
+use Illuminate\Support\Facades\Validator;
+use Rebing\GraphQL\Error\ValidationError;
+use Rebing\GraphQL\Support\Facades\GraphQL;
+
 
 class CreateUserMutation extends Mutation
 {
@@ -69,6 +73,24 @@ class CreateUserMutation extends Mutation
             'system_status' => ['nullable', 'in:active,inactive,deleted'],
         ];
     }
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'The user name is required.',
+            'name.max' => 'The user name may not be greater than 255 characters.',
+            'email.required' => 'The user email is required.',
+            'email.email' => 'The user email must be a valid email address.',
+            'email.unique' => 'The user email has already been taken.',
+            'position.max' => 'The user position may not be greater than 255 characters.',
+            'role.in' => 'The user role must be either admin or user.',
+            'password.required' => 'The user password is required.',
+            'password.min' => 'The user password must be at least 8 characters.',
+            'department.max' => 'The user department may not be greater than 255 characters.',
+            'gender.in' => 'The user gender must be either male, female, or other.',
+            'system_status.in' => 'The user system status must be either active, inactive, or deleted.',
+        ];
+    }
+
 
     public function resolve($root, array $args, $context, ResolveInfo $resolveInfo, Closure $getSelectFields)
     {
@@ -76,6 +98,11 @@ class CreateUserMutation extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
+        $validator = Validator::make($args, $this->rules(), $this->messages());
+        if ($validator->fails()) {
+            throw new ValidationError('Validation failed', $validator);
+        }
+        
         AuthCheckHelper::canCreateOrUpdateUser();
         return User::create($args);
     }
