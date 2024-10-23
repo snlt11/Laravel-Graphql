@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
+use App\Jobs\ExportUsersJob;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -13,13 +14,15 @@ class UserController extends Controller
     {
         $file_name = 'users_' . time() . '.xlsx';
 
-        // Excel::store(new UsersExport, 'export_file/' . $file_name);
+        ExportUsersJob::dispatch($file_name);
 
-        // $fileUrl = url('/storage/' . $file_name);
+        $fileUrl = url('/storage/export_file/' . $file_name);
 
-        // return $fileUrl;
-
-        return Excel::download(new UsersExport, $file_name);
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Export is being processed',
+            'file_url' => $fileUrl
+        ], 201);
     }
 
     public function import(Request $request)
