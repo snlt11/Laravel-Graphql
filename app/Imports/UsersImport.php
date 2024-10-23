@@ -3,9 +3,11 @@
 namespace App\Imports;
 
 use App\Models\User;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Maatwebsite\Excel\Concerns\ToModel;
+use Maatwebsite\Excel\Concerns\WithChunkReading;
 
-class UsersImport implements ToModel
+class UsersImport implements ToModel,WithChunkReading, ShouldQueue
 {
     /**
      * @param array $row
@@ -31,5 +33,9 @@ class UsersImport implements ToModel
             'joining_date' => $row[14],
             'system_status' => $row[15],
         ]);
+    }
+    public function chunkSize(): int
+    {
+        return 1000;
     }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Exports\UsersExport;
 use App\Imports\UsersImport;
 use App\Jobs\ExportUsersJob;
+use App\Jobs\ImportUsersJob;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -28,8 +29,8 @@ class UserController extends Controller
     public function import(Request $request)
     {
         try {
-            $fileType = $request->file('file');
-            Excel::import(new UsersImport, $fileType);
+            $fileType = $request->file('file')->store('imports');
+            ImportUsersJob::dispatch($fileType);
         } catch (\Throwable $e) {
             return response()->json([
                 'status' => 'error',
