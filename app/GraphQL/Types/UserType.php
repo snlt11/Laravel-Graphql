@@ -85,6 +85,18 @@ class UserType extends GraphQLType
                 'type' => Type::string(),
                 'description' => 'User System Status'
             ],
+            'created_at' => [
+                'type' => Type::string(),
+                'description' => 'User created at'
+            ],
+            'updated_at' => [
+                'type' => Type::string(),
+                'description' => 'User updated at'
+            ],
+            'deleted_at' => [
+                'type' => Type::string(),
+                'description' => 'User deleted at'
+            ],
         ];
     }
 }

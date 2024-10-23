@@ -37,7 +37,7 @@ class DeleteUserMutation extends Mutation
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        $user = User::findOrFail($args['id']);
+        $user = User::withTrashed()->findOrFail($args['id']);
         AuthCheckHelper::canDeleteUser($user);
         $user->delete();
         return 'User deleted successfully';

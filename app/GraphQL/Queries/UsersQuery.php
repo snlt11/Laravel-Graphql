@@ -47,6 +47,6 @@ class UsersQuery extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        return User::paginate($args['limit'], ['*'], 'page', $args['page']);
+        return User::withTrashed()->paginate($args['limit'], ['*'], 'page', $args['page']);
     }
 }

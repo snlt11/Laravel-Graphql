@@ -17,6 +17,12 @@ class AuthCheckHelper
         if ($authUser->role !== 'admin') {
             throw new Exception('Only admin users can delete accounts');
         }
+        if ($user->system_status == 'deleted') {
+            throw new Exception('User has been deleted');
+        }
+        $user->system_status = 'deleted';
+        $user->save();
+
     }
     public static function canCreateOrUpdateUser()
     {

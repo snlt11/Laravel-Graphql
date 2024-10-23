@@ -42,6 +42,6 @@ class UserByIdQuery extends Query
         $select = $fields->getSelect();
         $with = $fields->getRelations();
 
-        return User::findOrFail($args['id']);
+        return User::withTrashed()->findOrFail($args['id']);
     }
 }
